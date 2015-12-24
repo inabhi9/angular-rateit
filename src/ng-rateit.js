@@ -117,7 +117,7 @@ module
         $scope.setValue = function () {
             if ($scope.isHovering && !$scope.readOnly()) {
                 var tmpValue = angular.copy($scope.min + $scope.hoverValue);
-                $scope.beforeRated(tmpValue).then(function () {
+                $scope.beforeRated(tmpValue, $scope.arg).then(function () {
                     $scope.ngModel = tmpValue;
                     $scope.isHovering = false;
                     $timeout(function () {
